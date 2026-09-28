@@ -6,7 +6,7 @@ nav_order: 0.5
 ---
 # ONDTF starter package
 
-The repository includes an informative starter package under [`starter/`](../../starter/README.md). It is intentionally small: its purpose is to turn the adoption sequence into files an architecture or governance team can copy, review and progressively replace with jurisdiction- or sector-specific decisions.
+The repository includes an informative starter package under [`starter/`](https://github.com/qbf-consulting/open-national-digital-trust-framework/tree/main/starter). It is intentionally small: its purpose is to turn the adoption sequence into files an architecture or governance team can copy, review and progressively replace with jurisdiction- or sector-specific decisions.
 
 It covers scope/profile metadata, authority/decision rights, lifecycle, assurance/evidence, recognition/interoperability, scoped conformance claims, decisions and evidence.
 

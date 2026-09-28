@@ -22,7 +22,7 @@ Use [Guided Framework Construction](guided-framework-construction.md), [Construc
 
 ## 4. Produce the profile package
 
-Use [Generated Artefacts](generated-artefacts.md). The [starter package](../../starter/README.md) provides a small working skeleton. Replacing placeholders does not confer conformance, legal authority, approval or certification.
+Use [Generated Artefacts](generated-artefacts.md). The [starter package](https://github.com/qbf-consulting/open-national-digital-trust-framework/tree/main/starter) provides a small working skeleton. Replacing placeholders does not confer conformance, legal authority, approval or certification.
 
 ## 5. Implement against observable requirements
 
