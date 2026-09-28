@@ -1,11 +1,11 @@
 schema_version: "1.0"
-version: 0.9.0
+version: 1.0.0
 project:
   name: open-national-digital-trust-framework
-  maturity: candidate
+  maturity: stable
   lifecycle: active
-  operational_status: active-validation
-  specification_status: candidate-specification
+  operational_status: active-maintenance-and-adoption
+  specification_status: stable-framework-specification
   intended_use:
     - national-digital-trust-framework-design
     - jurisdictional-adaptation
@@ -14,47 +14,34 @@ project:
     - production-certification
     - jurisdictional-legal-approval
     - independent-third-party-assurance
+    - externally-demonstrated-interoperability
 authority:
-  normative_scope:
-    - national-digital-trust-framework
-  implementation_scope:
-    - framework-requirements
-    - governance-patterns
-    - jurisdiction-and-sector-profiles
-    - conformance-classes
-  does_not_own:
-    - jurisdictional-authority
-    - external-regulatory-policy
-    - downstream-implementation-governance
-  delegation: "Repository maintainers approve framework, profile, status, and release changes within the authority defined by repository governance; jurisdictions and external authorities retain their own decision rights."
+  normative_scope: [national-digital-trust-framework]
+  implementation_scope: [framework-requirements, governance-patterns, jurisdiction-and-sector-profiles, conformance-classes]
+  does_not_own: [jurisdictional-authority, external-regulatory-policy, downstream-implementation-governance]
+  delegation: "Repository maintainers approve framework, profile, status, and release changes within repository governance; jurisdictions and external authorities retain their own decision rights."
   revocation_or_supersession: "Framework releases, profiles, and status claims are superseded through explicit versioned releases and recorded governance changes while preserving historical evidence."
 evidence:
-  validation_commands:
-    - python3 scripts/validate_interoperability_candidate.py
-    - python3 scripts/validate_candidate_specification.py
-    - python3 scripts/validate_repo.py
-    - python3 scripts/validate_release.py
-    - bundle exec jekyll build --trace
-  evidence_outputs:
-    - artifacts/conformance/schema-validation-report.json
-    - artifacts/mermaid-rendered/
-    - _site/
+  maturity_level: E1
+  validation_commands: [make validate, make site]
+  evidence_outputs: [artifacts/conformance/schema-validation-report.json, artifacts/mermaid-rendered/, _site/]
   known_limitations:
-    - candidate specification status is not production certification
+    - stable specification status is not production certification
+    - independent implementation evidence is not yet claimed
     - jurisdiction-specific legal and institutional adoption remains outside repository authority
 release:
   short_name: ONDTF
-  version: 0.9.0
-  release_label: Candidate Specification
-  release_date: "2026-08-14"
-  canonical_repository: https://github.com/sankarshanmukhopadhyay/open-national-digital-trust-framework
+  version: 1.0.0
+  release_label: Stable Framework Specification
+  release_date: "2026-09-28"
+  canonical_repository: https://github.com/qbf-consulting/open-national-digital-trust-framework
 dependencies:
   TSMM:
     version_reviewed: 0.23.0
-    repository: https://github.com/sankarshanmukhopadhyay/trust-systems-meta-model
+    repository: https://github.com/qbf-consulting/trust-systems-meta-model
   TIS:
     version_reviewed: 0.12.0
-    repository: https://github.com/sankarshanmukhopadhyay/trust-infrastructure-schemas
+    repository: https://github.com/qbf-consulting/trust-infrastructure-schemas
 quality:
   pages_publication_coverage_required: true
   mermaid_validation_required: true

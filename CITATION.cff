@@ -2,8 +2,8 @@ cff-version: 1.2.0
 title: Open National Digital Trust Framework
 message: Please cite the ONDTF version used with the metadata below.
 type: generic
-version: 0.9.0
-date-released: '2026-08-14'
+version: 1.0.0
+date-released: '2026-09-28'
 authors:
   - family-names: Mukhopadhyay
     given-names: Sankarshan

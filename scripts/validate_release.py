@@ -1,17 +1,29 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import sys,yaml
+import re, sys, yaml
+
 root=Path(__file__).resolve().parents[1]; errors=[]
 version=(root/'VERSION').read_text().strip()
-if version!='0.9.0': errors.append(f'VERSION is {version}, expected 0.9.0')
-required=['scripts/validate_release_integrity.py','scripts/validate_candidate_specification.py','scripts/validate_interoperability_candidate.py','scripts/validate_identifier_registry.py','PROJECT-STATUS.yaml','CITATION.cff','model/releases/v0.9.0.yaml','release/RELEASE-NOTES-v0.9.0.md','release/MANIFEST-v0.9.0.md','release/CHECKLIST-v0.9.0.md','release/EVIDENCE-INVENTORY-v0.9.0.md','release/REQUIREMENTS-INVENTORY-v0.9.0.md','release/CONFORMANCE-COVERAGE-v0.9.0.md','release/DEVIATION-REGISTER-v0.9.0.md','release/DOCUMENT-INVENTORY-v0.9.0.md','release/IMPLEMENTATION-AND-INTEROPERABILITY-REPORT-v0.9.0.md','release/REVIEW-DISPOSITION-REPORT-v0.9.0.md','release/VALIDATION-NOTES-v0.9.0.md','docs/project/v0.9-readiness-checklist.md']
-for f in required:
- if not (root/f).exists(): errors.append(f'Missing {f}')
-for f in ['PROJECT-STATUS.yaml','CITATION.cff','model/releases/v0.9.0.yaml']:
- try: yaml.safe_load((root/f).read_text())
- except Exception as e: errors.append(f'Invalid YAML {f}: {e}')
+if not re.fullmatch(r'\d+\.\d+\.\d+',version): errors.append(f'VERSION is not semantic: {version}')
+required=[
+ 'scripts/validate_release_integrity.py','scripts/validate_v1_stable_controls.py','scripts/validate_v1_readiness.py',
+ 'PROJECT-STATUS.yaml','CITATION.cff',f'model/releases/v{version}.yaml',
+ f'release/RELEASE-NOTES-v{version}.md',f'release/MANIFEST-v{version}.md',f'release/CHECKLIST-v{version}.md',
+ f'release/EVIDENCE-INVENTORY-v{version}.md',f'release/REQUIREMENTS-INVENTORY-v{version}.md',
+ f'release/CONFORMANCE-COVERAGE-v{version}.md',f'release/VALIDATION-NOTES-v{version}.md']
+for p in required:
+ if not (root/p).exists(): errors.append(f'Missing {p}')
+for p in ['PROJECT-STATUS.yaml','CITATION.cff',f'model/releases/v{version}.yaml']:
+ try: yaml.safe_load((root/p).read_text())
+ except Exception as e: errors.append(f'Invalid YAML {p}: {e}')
 readme=(root/'README.md').read_text()
-if 'v0.9.0' not in readme or 'Candidate Specification' not in readme: errors.append('README candidate release status not updated')
+if f'v{version}' not in readme: errors.append('README release version not updated')
+status=yaml.safe_load((root/'PROJECT-STATUS.yaml').read_text()) or {}
+if str(status.get('version'))!=version: errors.append('PROJECT-STATUS.yaml version does not match VERSION')
+if version.startswith('1.') and status.get('project',{}).get('maturity')!='stable': errors.append('v1.x release must declare stable project maturity')
+model=yaml.safe_load((root/f'model/releases/v{version}.yaml').read_text()) or {}
+if str(model.get('framework_version'))!=version: errors.append('release model framework_version does not match VERSION')
+if model.get('evidence_maturity')!='E1': errors.append('v1.0.0 must preserve current E1 evidence boundary')
 if errors:
  print('Release validation failed:'); [print('- '+e) for e in errors]; sys.exit(1)
-print('Release validation passed: v0.9.0 Candidate Specification payload is internally coherent')
+print(f'Release validation passed: v{version} Stable Framework Specification payload is internally coherent')

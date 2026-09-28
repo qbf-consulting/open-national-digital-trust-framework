@@ -1,9 +1,9 @@
 schema_version: '1.1'
 framework:
   name: Open National Digital Trust Framework
-  version: 0.9.0
-  repository: https://github.com/sankarshanmukhopadhyay/open-national-digital-trust-framework
-  documentation: https://sankarshanmukhopadhyay.github.io/open-national-digital-trust-framework/
+  version: 1.0.0
+  repository: https://github.com/qbf-consulting/open-national-digital-trust-framework
+  documentation: https://qbf-consulting.github.io/open-national-digital-trust-framework/
 core_dependency_policy:
   external_model_required: false
   external_schema_suite_required: false
@@ -13,15 +13,15 @@ compatible_references:
 - name: Trust Systems Meta-Model
   short_name: TSMM
   version_reviewed: 0.23.0
-  repository: https://github.com/sankarshanmukhopadhyay/trust-systems-meta-model
-  documentation: https://sankarshanmukhopadhyay.github.io/trust-systems-meta-model/
+  repository: https://github.com/qbf-consulting/trust-systems-meta-model
+  documentation: https://qbf-consulting.github.io/trust-systems-meta-model/
   role: optional-compatible-reference-meta-model
   relationship: informative
 - name: Trust Infrastructure Schemas
   short_name: TIS
   version_reviewed: 0.12.0
-  repository: https://github.com/sankarshanmukhopadhyay/trust-infrastructure-schemas
-  documentation: https://sankarshanmukhopadhyay.github.io/trust-infrastructure-schemas/
+  repository: https://github.com/qbf-consulting/trust-infrastructure-schemas
+  documentation: https://qbf-consulting.github.io/trust-infrastructure-schemas/
   role: optional-compatible-schema-suite
   relationship: informative
 profile_dependency_policy:
