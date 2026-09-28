@@ -1,0 +1,9 @@
+ondtf_version: 1.0.0
+assurance:
+  scope: UNRESOLVED
+  dimensions: []
+  non_compensable_floors: []
+  evidence_requirements: []
+  freshness_requirements: []
+  reassessment_triggers: []
+  uncertainty_treatment: UNRESOLVED

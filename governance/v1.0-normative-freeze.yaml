@@ -1,12 +1,12 @@
 schema_version: 1
 framework: ONDTF
 target_release: v1.0.0
-state: release-decision-candidate
+state: released-stable
 baseline_source: model/project/normative-document-manifest.yaml
 baseline_semantics: >-
-  The v1.0 stable release candidate adopts the v0.9.0 candidate normative
-  semantics without a material semantic change. This record freezes the exact
-  repository bytes to be evaluated for the stable-release decision.
+  The v1.0 stable release adopts the v0.9.0 candidate normative semantics
+  without a material semantic change. This record preserves the exact
+  repository bytes admitted to the first stable ONDTF contract.
 
 normative_surface:
   - id: NCP-001
@@ -67,6 +67,6 @@ decision_authority:
   bypass_allowed: false
 
 claim_boundary:
-  - This freeze makes ONDTF eligible for a stable-release decision only when every v1 readiness gate is satisfied.
-  - It does not itself publish v1.0.0 or change the current external evidence level from E1.
-  - It does not assert independent implementation, external interoperability, production readiness, certification, or legal approval.
+  - The frozen normative surface is the v1.0.0 stable specification contract.
+  - Stable status does not change the current external evidence level from E1.
+  - Stable status does not assert independent implementation, external interoperability, production readiness, certification, or legal approval.

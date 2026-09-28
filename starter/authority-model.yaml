@@ -1,0 +1,7 @@
+ondtf_version: 1.0.0
+authorities:
+  governing_authority: {identity: UNRESOLVED, authority_source: UNRESOLVED, scope: UNRESOLVED, evidence: []}
+  supervisory_authority: {identity: UNRESOLVED, authority_source: UNRESOLVED, scope: UNRESOLVED, evidence: []}
+decision_rights: []
+delegations: []
+revocation_and_supersession: UNRESOLVED

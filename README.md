@@ -1,8 +1,8 @@
 # Open National Digital Trust Framework (ONDTF)
 
 [![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://qbf-consulting.github.io/open-national-digital-trust-framework/)
-[![Status](https://img.shields.io/badge/status-candidate%20specification-blue)](RELEASE_NOTES.md)
-[![Version](https://img.shields.io/badge/version-v0.9.0-green)](CHANGELOG.md)
+[![Status](https://img.shields.io/badge/status-stable%20specification-blue)](RELEASE_NOTES.md)
+[![Version](https://img.shields.io/badge/version-v1.0.0-green)](CHANGELOG.md)
 
 The **Open National Digital Trust Framework (ONDTF)** is a jurisdiction-neutral, multi-sector reference framework for governing, implementing, assuring, and interoperating digital trust infrastructure.
 
@@ -23,14 +23,15 @@ ONDTF supplies that missing governance and architecture layer.
 | Attribute | Value |
 |---|---|
 | Portfolio role | Jurisdiction-neutral national framework |
-| Lifecycle | Active Candidate Specification |
-| Current version | v0.9.0 |
-| Stability | Candidate normative core; external review window open |
+| Lifecycle | Active Stable Specification |
+| Current version | v1.0.0 |
+| Stability | Stable normative contract with governed v1.x compatibility |
+| Evidence maturity | E1 — repository-controlled reference/executable evidence |
 | Primary artefact | Framework, reference architecture, and profile method |
-| Normative posture | Normative requirements are explicitly labelled |
+| Normative posture | Normative requirements are explicitly labelled and version-controlled |
 | India material | Illustrative jurisdiction profile under `profiles/india/` |
 | Stewardship | QBF Consulting LLP |
-| Validation | `python3 scripts/validate_repo.py` |
+| Validation | `make validate && make site` |
 
 ## Framework independence and optional compatibility
 
@@ -60,15 +61,16 @@ See [Framework independence](docs/foundations/framework-independence.md), [Portf
 
 ## Start here
 
-For a guided introduction, use the rendered documentation:
+For adoption, begin with **[Adopt ONDTF](docs/adoption/adopt-ondtf.md)**. It provides one operational path from suitability and scope through Guided Framework Construction, profile production, implementation, evidence collection and conformance.
+
+Supporting entry points:
 
 - **[ONDTF in One Hour](https://qbf-consulting.github.io/open-national-digital-trust-framework/docs/learning/one-hour.html)**
 - **[Choose a role-based learning path](https://qbf-consulting.github.io/open-national-digital-trust-framework/learn/)**
+- **[Use the starter package](starter/README.md)**
 - **[View the framework map](https://qbf-consulting.github.io/open-national-digital-trust-framework/docs/documentation/framework-map.html)**
 - **[Browse the ONDTF Requirements Register](https://qbf-consulting.github.io/open-national-digital-trust-framework/docs/core-specification/requirements-register.html)**
 - **[Citation metadata](CITATION.cff)**
-
-The GitHub Pages site provides sidebar reference navigation, breadcrumbs, search, and explicit Previous/Next links for the canonical guided sequence.
 
 The [ONDTF Controlled Vocabulary](docs/terminology/index.md) provides governed, machine-readable definitions used across specifications, profiles, conformance, and release governance.
 
@@ -77,24 +79,26 @@ The [ONDTF Controlled Vocabulary](docs/terminology/index.md) provides governed, 
 ```bash
 gem install bundler
 bundle install
-python3 scripts/validate_repo.py
-python3 scripts/extract_mermaid.py
-bash scripts/validate_mermaid.sh
-bundle exec jekyll build
-python3 scripts/check_built_site.py
+pip install -r requirements-validation.txt
+make validate
+make site
 ```
 
 ## Scope boundary
 
 ONDTF does **not** define a national identity system, mandate a credential format, create legal recognition by itself, replace sector regulators, or centralise all trust decisions in one registry. It defines the common framework within which such systems can interoperate and be governed.
 
+A stable specification is a claim about the governed specification contract. It is **not** a claim of independent implementation, production readiness, certification, legal or regulatory approval, or externally demonstrated interoperability.
+
 ## Licensing
 
-Documentation is licensed under [CC BY 4.0](LICENSE). Code and executable examples may be separately licensed in later releases.
+Documentation is licensed under [CC BY 4.0](LICENSE). Code and executable examples may be separately licensed where stated.
 
 ## Current release
 
-**v0.9.0 — Candidate Specification** freezes the candidate normative architecture, provides complete requirement-to-conformance coverage, adds named conformance classes, five-layer interoperability and bounded recognition/equivalence models, provisional evidence-led calibration, candidate change control, and versioned Guided Framework Construction. Candidate status is explicitly not a claim of legal approval, production certification, or externally operated interoperability.
+**v1.0.0 — Stable Framework Specification** adopts the frozen v0.9 candidate normative semantics as the first stable ONDTF contract. All nine repository-controlled promotion gates are satisfied. Stable v1.x compatibility, errata, emergency-change and evidence-invalidation controls are active. External evidence maturity remains **E1**.
+
+See [release notes](RELEASE_NOTES.md) and [Specification Maturity and Evidence Governance](docs/project/maturity-and-evidence.md).
 
 ## Real-world worked exemplars
 

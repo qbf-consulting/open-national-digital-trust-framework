@@ -1,0 +1,24 @@
+schema_version: 1.0.0
+framework_version: 1.0.0
+release_label: Stable Framework Specification
+release_date: '2026-09-28'
+specification_maturity: stable
+evidence_maturity: E1
+normative_baseline:
+  source: governance/v1.0-normative-freeze.yaml
+  semantic_change_from_v0_9_candidate: false
+  frozen_artifact_count: 5
+promotion:
+  readiness_source: governance/v1.0-readiness.yaml
+  repository_controlled_gates_satisfied: 9
+  repository_controlled_gates_total: 9
+claim_boundary:
+  permitted: [stable-normative-contract, governed-v1-compatibility, deterministic-repository-validation, repository-controlled-reference-and-executable-evidence]
+  not_asserted: [independent-implementation, externally-demonstrated-interoperability, operational-deployment-validation, production-readiness, certification, legal-or-regulatory-approval]
+quality_gates: [repository_validation, stable_control_validation, v1_readiness_validation, release_integrity, identifier_resolution, conformance_validation, interoperability_validation, mermaid_source_and_render, jekyll_build, built_site_link_validation]
+release_notes: release/RELEASE-NOTES-v1.0.0.md
+manifest: release/MANIFEST-v1.0.0.md
+evidence_inventory: release/EVIDENCE-INVENTORY-v1.0.0.md
+requirements_inventory: release/REQUIREMENTS-INVENTORY-v1.0.0.md
+conformance_coverage: release/CONFORMANCE-COVERAGE-v1.0.0.md
+validation_notes: release/VALIDATION-NOTES-v1.0.0.md

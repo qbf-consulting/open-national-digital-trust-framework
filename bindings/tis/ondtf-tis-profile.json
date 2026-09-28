@@ -1,40 +1,22 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "profileId": "urn:ondtf:profile:tis:0.9.0",
-  "ondtfVersion": "0.9.0",
+  "profileId": "urn:ondtf:profile:tis:1.0.0",
+  "ondtfVersion": "1.0.0",
   "tisVersion": "0.12.0",
   "reviewStatus": {
     "status": "current",
-    "reviewedAgainstOndtfVersion": "0.9.0",
-    "reviewedOn": "2026-08-14",
-    "reviewBasis": "Candidate specification compatibility review against stable normative identifiers, conformance classes and current interoperability/recognition models.",
-    "result": "compatible-with-candidate-with-profile-specific-limitations"
+    "reviewedAgainstOndtfVersion": "1.0.0",
+    "reviewedOn": "2026-09-28",
+    "reviewBasis": "Stable-release compatibility review. ONDTF v1.0.0 adopts the frozen v0.9.0 candidate normative semantics without material semantic change.",
+    "result": "compatible-with-stable-with-profile-specific-limitations"
   },
-  "sourceRepository": "https://github.com/sankarshanmukhopadhyay/trust-infrastructure-schemas",
+  "sourceRepository": "https://github.com/qbf-consulting/trust-infrastructure-schemas",
   "artifactRequirements": [
-    {
-      "family": "authority-boundary",
-      "requirement": "required-for-assured-authority"
-    },
-    {
-      "family": "delegation-lineage",
-      "requirement": "required-when-derived"
-    },
-    {
-      "family": "evidence-bundle-manifest",
-      "requirement": "required-for-high-impact"
-    },
-    {
-      "family": "decision-receipt",
-      "requirement": "required-for-reviewable-effects"
-    },
-    {
-      "family": "registry-entry",
-      "requirement": "required-for-recognised-services"
-    },
-    {
-      "family": "conformance-declaration",
-      "requirement": "required-for-formal-claims"
-    }
+    {"family":"authority-boundary","requirement":"required-for-assured-authority"},
+    {"family":"delegation-lineage","requirement":"required-when-derived"},
+    {"family":"evidence-bundle-manifest","requirement":"required-for-high-impact"},
+    {"family":"decision-receipt","requirement":"required-for-reviewable-effects"},
+    {"family":"registry-entry","requirement":"required-for-recognised-services"},
+    {"family":"conformance-declaration","requirement":"required-for-formal-claims"}
   ]
 }

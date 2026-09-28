@@ -2,6 +2,26 @@
 
 ## [Unreleased]
 
+Future v1.x work is evidence-led and governed by the stable compatibility/change-control model.
+
+## [1.0.0] - 2026-09-28
+
+### Stable specification
+- promoted ONDTF from Candidate Specification to Stable Framework Specification after all nine repository-controlled v1.0 gates were satisfied;
+- adopted the frozen v0.9.0 candidate normative semantics without material semantic change;
+- activated governed v1.x compatibility, errata, emergency-change and evidence-invalidation controls;
+- preserved the E1 evidence boundary and explicitly excluded independent implementation, external interoperability, operational deployment, production-readiness, certification and legal-approval claims.
+
+### Adoption
+- added a single operational **Adopt ONDTF** front door from suitability and scoping through construction, implementation, evidence and conformance;
+- added a minimal copyable starter package for scope, authority, lifecycle, assurance, recognition, conformance, decisions and evidence.
+
+### Release engineering
+- added workflow-based release publication derived from `VERSION` and versioned release notes;
+- aligned README, project status, citation metadata, compatibility bindings, dependency metadata, roadmap and release payload to v1.0.0 and QBF stewardship.
+
+### Candidate-to-stable accumulated changes
+
 ### Assurance hardening
 - closed RAHP findings `ON-RH-01` through `ON-RH-06` with machine-readable traceability and a dedicated validation gate;
 - added an informative legitimacy-evidence profile that separates formal mandate evidence from participation, proportionality, independent review, transparency and affected-party representation;
@@ -271,3 +291,4 @@
 - Added foundations, assurance, adoption, jurisdiction-profile, decision-record, dependency, and roadmap material.
 - Added architecture, governance, profile, and adoption diagrams rendered with Mermaid.
 - Added repository validation and GitHub Pages quality workflow.
+

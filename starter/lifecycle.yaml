@@ -1,0 +1,9 @@
+ondtf_version: 1.0.0
+provider_lifecycle_profile:
+  admission_authority: UNRESOLVED
+  activation_conditions: []
+  continuing_supervision: UNRESOLVED
+  restriction_and_suspension: UNRESOLVED
+  withdrawal_and_exit: UNRESOLVED
+  status_publication: UNRESOLVED
+  evidence_retention: UNRESOLVED
