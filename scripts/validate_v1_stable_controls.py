@@ -29,8 +29,8 @@ def validate_freeze(obj):
     errors = []
     if obj.get("target_release") != "v1.0.0":
         errors.append("freeze target_release must be v1.0.0")
-    if obj.get("state") != "release-decision-candidate":
-        errors.append("freeze state must remain release-decision-candidate before release")
+    if obj.get("state") not in {"release-decision-candidate", "released-stable"}:
+        errors.append("freeze state must be release-decision-candidate or released-stable")
     surface = obj.get("normative_surface") or []
     ids = [x.get("id") for x in surface]
     expected_ids = {"NCP-001", "NCP-002", "NCP-003", "NCP-004", "NCP-005"}
@@ -197,13 +197,13 @@ errors.extend(validate_change_control(change))
 errors.extend(validate_errata(errata))
 errors.extend(validate_coverage(coverage))
 
-# Candidate normative metadata must not contradict the v0.9 candidate manifest.
+# The v1.0 freeze intentionally retains the exact v0.9 candidate normative bytes.\n# Stable promotion changes governance/release state, not those frozen bytes.
 roles = load(ROOT / "model" / "governance" / "institutional-role-catalogue.yaml")
 lifecycle = load(ROOT / "model" / "operations" / "provider-lifecycle.yaml")
 if roles.get("version") != "0.9.0-candidate" or roles.get("status") != "active":
-    errors.append("institutional role catalogue metadata is not aligned to v0.9 candidate")
+    errors.append("frozen institutional role catalogue metadata no longer matches admitted v0.9 candidate bytes")
 if lifecycle.get("version") != "0.9.0-candidate" or lifecycle.get("status") != "active":
-    errors.append("provider lifecycle metadata is not aligned to v0.9 candidate")
+    errors.append("frozen provider lifecycle metadata no longer matches admitted v0.9 candidate bytes")
 
 # Deliberate falsification checks prove the validators reject the principal failure classes.
 negative_failures = []

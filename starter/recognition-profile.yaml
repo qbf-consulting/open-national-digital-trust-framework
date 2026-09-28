@@ -1,0 +1,9 @@
+ondtf_version: 1.0.0
+recognition:
+  required: false
+  authority: UNRESOLVED
+  counterpart_domains: []
+  equivalence_dimensions: []
+  weakest_link_rule: UNRESOLVED
+  expiry_and_revocation: UNRESOLVED
+  evidence_basis: []

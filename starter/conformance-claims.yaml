@@ -1,0 +1,4 @@
+ondtf_version: 1.0.0
+claims: []
+# Each claim should identify conformance_class, profile, scope,
+# applicable_requirements, evidence, assessment_authority, assessed_at and status.

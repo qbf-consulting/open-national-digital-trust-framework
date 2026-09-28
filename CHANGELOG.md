@@ -2,33 +2,23 @@
 
 ## [Unreleased]
 
-### Assurance hardening
-- closed RAHP findings `ON-RH-01` through `ON-RH-06` with machine-readable traceability and a dedicated validation gate;
-- added an informative legitimacy-evidence profile that separates formal mandate evidence from participation, proportionality, independent review, transparency and affected-party representation;
-- added operational-independence evidence tests, deterministic negative emergency-authority vectors and cross-profile portable-semantics vectors;
-- bounded recognition/equivalence with an explicit assurance ceiling, weakest-link rule, evidence basis, expiry and revocation state;
-- extended remedy evidence so assessors can distinguish procedural completion from an effective change to consequential state.
+Future v1.x work is evidence-led and governed by the stable compatibility/change-control model.
 
-### Fixed
-- corrected the generated-site routes from the Real-world Worked Exemplars landing page to all four exemplar packages and the worked operational profile, resolving the GitHub Pages built-link failures;
-- removed the duplicated legacy requirement list from the reader-facing core specification so retired v0.5-only identifiers are no longer presented as current candidate requirements.
+## [1.0.0] - 2026-09-28
 
-### Added
-- a generated ONDTF Requirements Register with stable anchors for all 28 canonical candidate requirements, including normative force, applicability, accountable/responsible roles, expected evidence and candidate conformance assertions;
-- direct automatic linking of every published `ONDTF-*` identifier to its Requirements Register entry, with CI validation that the register remains synchronized with the canonical requirement catalogue and conformance suite.
+### Stable specification
+- promoted ONDTF from Candidate Specification to Stable Framework Specification after all nine repository-controlled v1.0 gates were satisfied;
+- adopted the frozen v0.9.0 candidate normative semantics without material semantic change;
+- activated governed v1.x compatibility, errata, emergency-change and evidence-invalidation controls;
+- preserved the E1 evidence boundary and explicitly excluded independent implementation, external interoperability, operational deployment, production-readiness, certification and legal-approval claims.
 
-### Real-world worked exemplars
-- Added source-bounded ONDTF worked exemplars for Australia Digital ID, the UK DVS Trust Framework, Singapore Singpass, and the EUDI Wallet ecosystem.
-- Each exemplar separates authoritative source facts, ONDTF mappings, and analytical inferences; includes role/lifecycle/scenario/evidence fixtures; and preserves ecosystem neutrality.
-- Added CI validation that examples remain informative, source-bounded, requirement-resolving, and non-normative.
+### Adoption
+- added a single operational **Adopt ONDTF** front door from suitability and scoping through construction, implementation, evidence and conformance;
+- added a minimal copyable starter package for scope, authority, lifecycle, assurance, recognition, conformance, decisions and evidence.
 
-### Added
-- explicit external-pattern portability and substitutability semantics, including five controlled implementation relationships;
-- a capability-first portability guide and three non-normative multi-ecosystem mapping examples.
-
-### Changed
-- refined Guided Framework Construction so external capabilities and required outcomes are established before profile-specific technology selection;
-- strengthened external-adoption validation to prevent examples from acquiring live-register authority and to require justification for exclusive selections.
+### Release engineering
+- added workflow-based release publication derived from `VERSION` and versioned release notes;
+- aligned README, project status, citation metadata, compatibility bindings, dependency metadata, roadmap and release payload to v1.0.0 and QBF stewardship.
 
 ## [0.9.0] - 2026-08-14
 

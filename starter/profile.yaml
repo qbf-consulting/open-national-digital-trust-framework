@@ -1,0 +1,17 @@
+ondtf_version: 1.0.0
+profile_id: UNRESOLVED
+title: UNRESOLVED
+status: draft
+scope:
+  jurisdiction_or_domain: UNRESOLVED
+  sector: UNRESOLVED
+  public_purpose: UNRESOLVED
+  trust_services: []
+  consequential_effects: []
+  affected_parties: []
+  explicit_exclusions: []
+governance:
+  governing_authority: UNRESOLVED
+  profile_authority: UNRESOLVED
+dependencies: []
+unresolved_decisions: []
