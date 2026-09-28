@@ -2,7 +2,7 @@
 layout: default
 title: Adopt ONDTF
 parent: Adoption
-nav_order: 1
+nav_order: 0
 ---
 # Adopt ONDTF
 

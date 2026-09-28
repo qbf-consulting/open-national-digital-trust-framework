@@ -2,7 +2,7 @@
 layout: default
 title: Starter Package
 parent: Adoption
-nav_order: 2
+nav_order: 0.5
 ---
 # ONDTF starter package
 
