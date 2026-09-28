@@ -19,3 +19,17 @@ Priority work:
 The adopter front door and starter package added with v1.0.0 should be treated as instruments for this evidence programme, not as reasons to introduce a new normative layer.
 
 A v1.x change should answer a demonstrated adopter, implementation, conformance, assurance or maintenance need. Evidence maturity remains independent of specification version.
+
+## Historical maturation programme traceability
+
+The pre-v1 maturation programme identifiers are retained below for audit and evidence traceability. Their candidate-era disposition labels describe the historical programme records; they do **not** redefine the v1.0.0 Stable Framework Specification maturity or current roadmap.
+
+| Programme | Historical disposition |
+|---|---|
+| MPR-01 — Normative and role architecture | `completed_for_v0.6.0` |
+| MPR-02 — Conformance and accreditation | `active_next_evidence_phase` |
+| MPR-03 — Profiles and external-framework adoption | `active_next_evidence_phase` |
+| MPR-04 — Implementation and interoperability | `candidate_internal_cross_codebase_evidence_external_independence_pending` |
+| MPR-05 — Evidence and quantitative calibration | `candidate_provisional_calibration_and_internal_adversarial_evidence` |
+| MPR-06 — Rights, accessibility and remedy validation | `candidate_journey_evidence_external_pilot_pending` |
+| MPR-07 — Candidate-specification governance | `candidate_governance_active_external_review_open` |
