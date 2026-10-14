@@ -18,12 +18,12 @@ jobs:
       - run: pip install -r requirements-validation.txt
       - name: Validate repository content and publication coverage
         run: python3 scripts/validate_workflow_security.py && python3 scripts/validate_interoperability_candidate.py && python3 scripts/validate_candidate_specification.py && python3 scripts/build_requirements_register.py && python3 scripts/build_identifier_registry.py && python3 scripts/validate_identifier_registry.py && python3 scripts/validate_requirements_register.py && python3 scripts/validate_schema_instances.py && python3 scripts/validate_release_integrity.py && python3 scripts/validate_terminology.py && python3 scripts/validate_repo.py && python3 scripts/validate_assurance_references.py && python3 scripts/validate_data_privacy_rights.py && python3 scripts/validate_integration.py && python3 scripts/validate_maturation.py && python3 scripts/validate_normative_governance.py && python3 scripts/validate_operations_conformance.py && python3 scripts/validate_assurance_rights.py && python3 scripts/validate_profile_adoption.py && python3 scripts/validate_jurisdiction_exemplars.py && python3 scripts/validate_sector_standards.py && python3 scripts/validate_worked_profile.py && python3 scripts/validate_release.py
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24'
       - name: Validate and render every Mermaid diagram
         run: python3 scripts/check_mermaid_source.py && python3 scripts/extract_mermaid.py && bash scripts/validate_mermaid.sh
-      - uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b # v1 branch observed 2026-09-07
+      - uses: ruby/setup-ruby@e81a8fa391b11a595c1b7ed84177cc0fe02faf83 # v1 branch observed 2026-09-07
         with:
           ruby-version: '3.3'
           bundler-cache: true
@@ -32,7 +32,7 @@ jobs:
       - name: Inspect generated site
         run: python3 scripts/check_built_site.py
       - name: Upload validation evidence
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: ondtf-documentation-validation
           path: |
